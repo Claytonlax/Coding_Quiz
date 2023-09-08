@@ -2,22 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coding Quiz</title>
-    <link rel="stylesheet" type="text/css" href="./Assets/styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="./Assets/styles.css" />
   </head>
   <body>
-    <h1>Quiz Game</h1>
-    <button id="start_button">START</button>
-    <div id="game_container">
-      Game Content
-    
-    
+    <div class="header">
+      <h1 class="title">Coding Quiz Challenge</h1>
+      <h2 class="questions">
+        Try to answer the following code-related questions within the time
+        limit. Keep in mind that incorrect answers will penalize your time
+        by three seconds. Any remaining time is your final score.
+      </h2>
     </div>
 
-   
+    <div class="quiz">
+      <div id="questions"></div>
 
+      <div id="answers"></div>
+    </div>
+
+    <div class="controls">
+      <p>Time Remaining: <span id="countdown">40</span></p>
+      <button class="btn" id="start-quiz">Start Quiz</button>
+    </div>
+
+    <form>
+      <div>Score:<span id="score"></span></div>
+
+      <label for="initials"> </label>
+      <input type="text" name="name" id="initials" placeholder="name" />
+      <button id="submit">Submit</button>
+      <ol id="highscores">
+        <span><b>HIGHSCORES</b></span>
+      </ol>
+    </form>
     <script src="./Assets/script.js"></script>
   </body>
 </html>
